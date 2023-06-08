@@ -1,5 +1,7 @@
 import requests
 
+print("<==== Buscador de Endereço ====>\n")
+
 #Funcao
 def isnumber(value):
   try:
@@ -8,7 +10,8 @@ def isnumber(value):
     return False
   return True
 
-cep = input("Digite o seu cep: ")
+
+cep = input("Digite o cep: ")
 
 #substitui uma string
 cep = cep.replace("-", "")
@@ -24,7 +27,7 @@ else:
   if (response.status_code == 200):
     result = response.json()
   
-    print("cep: " + result['cep'])
+    print("\ncep: " + result['cep'])
     print("logradouro: " + result['logradouro'])
     print("bairro: " + result['bairro'])
     print("localidade: " + result['localidade'])
