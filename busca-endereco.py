@@ -8,7 +8,6 @@ def isnumber(value):
     return False
   return True
 
-
 cep = input("Digite o seu cep: ")
 
 #substitui uma string
